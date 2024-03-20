@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
-});
+})->name('home');
 
+
+/* ADMIN ROUTES */
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
